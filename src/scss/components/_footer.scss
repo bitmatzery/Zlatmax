@@ -1,0 +1,234 @@
+.footer {
+  background-color: $black-default;
+}
+.text-footer {
+  @include adaptiveValue("padding-top", 60, 40, 1);
+  @include adaptiveValue("padding-bottom", 60, 40, 1);
+  background: url("../img/footer/footer_bg.jpg") top / cover no-repeat;
+
+  &__title {
+    color: $orange;
+    text-align: center;
+    font-weight: bold;
+    @include adaptiveValue("font-size", 30, 24, 1);
+    line-height: math.div(46, 30);
+
+    &:not(:last-child) {
+      margin-bottom: em(30, 30);
+    }
+  }
+
+  &__text {
+    color: $white;
+    @include adaptiveValue("font-size", 18, 16, 1);
+    line-height: math.div(27, 18);
+  }
+}
+
+.body-footer {
+  @include adaptiveValue("padding-top", 100, 40, 1);
+  @include adaptiveValue("padding-bottom", 50, 40, 1);
+  display: grid;
+  @include adaptiveValue("gap", 35, 25, 1);
+
+  &__row {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(rem(290), 1fr));
+    column-gap: rem(40);
+    @include adaptiveValue("row-gap", 40, 20, 1);
+
+    &:not(:last-child) {
+      padding-bottom: rem(30);
+      border-bottom: 1px solid rgba(255, 255, 255, 0.5);
+    }
+  }
+
+  &__bottom {
+    color: rgba(255, 255, 255, 0.8);
+    font-size: rem(14);
+    line-height: math.div(27, 14);
+
+    @media (min-width: 1200px) {
+      display: flex;
+      justify-content: space-between;
+      gap: rem(20);
+    }
+  }
+
+  &__rules {
+    max-width: rem(820);
+  }
+
+  &__copy {
+    span {
+      white-space: nowarp;
+    }
+  }
+}
+
+.spoller-item-footer {
+  &__text {
+    max-width: rem(320);
+    line-height: math.div(27, 18);
+    color: rgba(255, 255, 255, 0.8);
+    a {
+      color: $orange;
+      @media (any-hover: hover) {
+        &:hover {
+          text-decoration: underline;
+        }
+      }
+    }
+  }
+
+  &__title {
+    text-transform: uppercase;
+    color: $white;
+    font-weight: 600;
+    font-size: rem(18);
+    line-height: math.div(22, 18);
+    position: relative;
+    &::before {
+      content: "";
+      position: absolute;
+      background: url("../img/icons/arrow-bottom.svg") no-repeat 50% 50% / 1em 1em;
+      width: 0.8em;
+      height: 0.8em;
+      top: rem(5);
+      right: rem(-20);
+      transition: transform 0.3s ease 0s;
+    }
+    &.__active {
+      &::before {
+        transform: rotate(-180deg);
+      }
+    }
+  }
+
+  &__body {
+    @include adaptiveValue("padding-top", 30, 20, 1);
+    @include adaptiveValue("padding-bottom", 30, 20, 1);
+  }
+}
+.menu-footer {
+  &:not(:last-child) {
+    @include adaptiveValue("margin-bottom", 32, 20, 1);
+  }
+
+  &__item {
+    line-height: 1.5;
+    display: flex;
+    color: rgba(255, 255, 255, 0.8);
+    &:not(:last-child) {
+      margin-bottom: em(20, 18);
+    }
+  }
+
+  &__link {
+    display: inline-flex;
+    line-height: math.div(27, 18);
+    color: rgba(255, 255, 255, 0.8);
+  }
+}
+
+.list-with-icons {
+  padding-left: rem(30);
+}
+
+.icon-footer-phone {
+  position: relative;
+  &::before {
+    content: "";
+    position: absolute;
+    background: url("../img/icons/footer-phone.svg") no-repeat 50% 50% / 1em 1em;
+    width: 1em;
+    height: 1em;
+    top: rem(2);
+    left: rem(-25);
+  }
+}
+.icon-footer-clock {
+  position: relative;
+  &::before {
+    content: "";
+    position: absolute;
+    background: url("../img/icons/footer-clock.svg") no-repeat 50% 50% / 1em 1em;
+    width: 1em;
+    height: 1em;
+    top: rem(2);
+    left: rem(-25);
+  }
+}
+.icon-footer-location {
+  position: relative;
+  &::before {
+    content: "";
+    position: absolute;
+    background: url("../img/icons/footer-location.svg") no-repeat 50% 50% / 1em 1em;
+    width: 1em;
+    height: 1em;
+    top: rem(2);
+    left: rem(-25);
+  }
+}
+.icon-footer-email {
+  position: relative;
+  &::before {
+    content: "";
+    position: absolute;
+    background: url("../img/icons/footer-email.svg") no-repeat 50% 50% / 1em 1em;
+    width: 1em;
+    height: 1em;
+    top: rem(2);
+    left: rem(-25);
+  }
+}
+
+.footer-subscribe {
+  &__label {
+    display: block;
+    line-height: math.div(22, 18);
+    color: rgba(255, 255, 255, 0.8);
+
+    &:not(:last-child) {
+      margin-bottom: em(10, 18);
+    }
+  }
+
+  &__line {
+    display: flex;
+    border-radius: rem(3);
+    overflow: hidden;
+  }
+
+  &__input {
+    background: rgba(255, 255, 255, 0.05);
+    height: rem(48);
+    padding: 0 rem(20);
+    color: $white;
+    width: 100%;
+    border: 1px solid $white;
+    border-right: none;
+  }
+
+  &__button {
+    flex: 0 0 rem(50);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: $orange;
+  }
+
+  &__arrow-bottom-img {
+    width: 0.6em;
+    height: 0.6em;
+    fill: $white;
+    stroke: $white;
+    transform: rotate(-90deg);
+  }
+}
+
+.social-footer {
+  display: flex;
+  gap: rem(24);
+}

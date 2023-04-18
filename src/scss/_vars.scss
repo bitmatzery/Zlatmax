@@ -1,0 +1,41 @@
+:root {
+  // base
+  --content-max-width: 1920px;
+  --content-width: 1600px;
+  --container-offset: 15px;
+  --container-width: calc(var(--content-width) + (var(--container-offset) * 2));
+  --container-max-width: calc(var(--content-max-width) + (var(--container-offset) * 2));
+}
+
+// adaptive scss base properties
+$maxWidth: 1920;
+$contentWidth: 1600;
+$containerOffset: 15;
+$maxWidthContainer: calc($contentWidth + $containerOffset * 2);
+
+// fonts
+$font-family: "Montserrat", sans-serif;
+$font-family-title: "Montserrat", sans-serif;
+
+// font Bold
+%title-font-B {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 700;
+}
+
+// font SemiBold
+%title-font-SB {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 600;
+}
+
+// color
+$white: #fff;
+$black: #000;
+$white-default: #ecf1f2;
+$black-title: #363636;
+$black-default: #141414;
+$orange: #e8aa31;
+$blue: #0093a1;
+$gold: #9f6b08;
+$ligth-green: #b9c400;

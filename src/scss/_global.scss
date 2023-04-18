@@ -1,0 +1,52 @@
+html,
+body {
+  min-height: 100%;
+}
+
+body {
+  font-family: $font-family;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 1.2;
+  color: $black-default;
+  min-width: 300px;
+}
+
+a {
+  color: inherit;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p _che {
+  margin: 0;
+}
+
+button {
+  padding: 0;
+  border: none;
+  color: inherit;
+  background-color: transparent;
+}
+
+.container-big {
+  margin: 0 auto;
+  min-height: 100%;
+  padding: 0 var(--container-offset);
+  max-width: var(--container-max-width);
+}
+
+.container {
+  margin: 0 auto;
+  min-height: 100%;
+  padding: 0 var(--container-offset);
+  max-width: var(--container-width);
+}
+
+img {
+  object-fit: cover;
+}

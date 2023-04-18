@@ -1,0 +1,15 @@
+// библиотеки
+@use "sass:math";
+// базовые подключения
+@import "vars";
+@import "mixins";
+@import "fonts";
+@import "functions";
+@import "global";
+
+// подключения компонентов страницы
+@import "./components/button";
+@import "./components/header";
+@import "./components/slider";
+@import "./components/main-block-slider";
+@import "./components/footer";
