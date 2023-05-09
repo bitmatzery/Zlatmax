@@ -5,7 +5,16 @@
   <body class="page__body">
     @include('partials/header.html')
     <main class="main">
-        </section>
+      @include('partials/main-block-slider.html')
+      @include('partials/catalog-cards.html')
+      <section class="page__hits-products hits-products">
+        @include('partials/products-slider.html', {
+          "title": "Хиты продаж",
+          "page": "catalog.html",
+          "moretext": "Перейти в каталог",
+          "img-card": "img/product-cards/01.jpg",
+        })
+      </section>
     </main>
     @include('partials/footer.html')
   </body>

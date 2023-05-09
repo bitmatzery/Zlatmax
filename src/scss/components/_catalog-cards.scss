@@ -1,0 +1,113 @@
+.catalog-cards {
+  @include adaptiveValue("padding-top", 100, 40, 1);
+  @include adaptiveValue("padding-bottom", 70, 40, 1);
+
+  &__container {
+    display: grid;
+    gap: rem(30);
+
+    @media (min-width: 400px) {
+      grid-template-columns: repeat(auto-fit, minmax(rem(450), 1fr));
+    }
+  }
+}
+
+.item-catalog-cards {
+  overflow: hidden;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
+  position: relative;
+  min-height: rem(290);
+  transition: box-shadow 0.3s ease 0s;
+
+  @media (any-hover: hover) {
+    &:hover {
+      box-shadow: 0 4px 25px rgba(0, 0, 0, 0.25);
+    }
+  }
+
+  &__body {
+    position: relative;
+    z-index: 2;
+    @include adaptiveValue("padding", 30, 20, 3);
+  }
+
+  &__title {
+    &:not(:last-child) {
+      margin-bottom: em(30, 24);
+    }
+  }
+
+  &__link-title {
+    font-weight: 600;
+    font-size: rem(24);
+    line-height: math.div(34, 24);
+    display: inline-block;
+
+    &::after {
+      content: "";
+      width: rem(70);
+      height: rem(2);
+      display: block;
+      margin-top: rem(15);
+      background-color: $orange;
+      transition: width 0.8s ease 0s;
+    }
+    @media (any-hover: hover) {
+      &:hover {
+        &::after {
+          width: 100%;
+        }
+      }
+    }
+  }
+
+  &__item {
+    position: relative;
+    padding: 0 0 0 rem(20);
+
+    &::before {
+      content: "";
+      width: rem(6);
+      height: rem(6);
+      background-color: $orange;
+      border-radius: 50%;
+      position: absolute;
+      left: 0;
+      top: em(8, 18);
+    }
+    &:not(:last-child) {
+      margin-bottom: rem(10);
+    }
+  }
+
+  &__link {
+    font-size: rem(18);
+    line-height: math.div(24, 18);
+
+    @media (any-hover: hover) {
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+  }
+
+  &__img {
+    width: 100%;
+    text-align: right;
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-end;
+    transform: translate(0, 20%);
+
+    img {
+      max-width: 100%;
+    }
+
+    @media (min-width: 400px) {
+      position: absolute;
+      height: 100%;
+      top: 0;
+      right: 0;
+    }
+  }
+}
