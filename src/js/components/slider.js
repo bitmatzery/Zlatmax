@@ -87,4 +87,121 @@ if (document.querySelector('.products-slider__slider')) {
   });
 }
 
+// products-new
+if (document.querySelector('.products-new__slider')) {
+  new Swiper('.products-new__slider', {
+    modules: [Navigation, Pagination, Parallax, Autoplay],
+    autoplay: {
+      delay: 3000,
+      disableOnInteraction: false,
+    },
+    watchOverflow: true,
+    slidesPerView: 3,
+    spaceBetween: 30,
+    observer: true,
+    observeParents: true,
+    slideClass: 'products-new__slide',
+    wrapperClass: 'products-new__swiper',
+
+    breakpoints: {
+      320: {
+        slidesPerView: 1,
+        spaceBetween: 10,
+      },
+      768: {
+        slidesPerView: 2,
+        spaceBetween: 20,
+      },
+      992: {
+        slidesPerView: 2,
+        spaceBetween: 20,
+      },
+      1330: {
+        slidesPerView: 3,
+        spaceBetween: 30,
+      },
+    },
+    pagination: {
+      el: '.products-new__dotts',
+      clickable: true,
+      dynamicBullets: true,
+    },
+  });
+}
+
+// products-blocks
+if (document.querySelector('.images-product-block')) {
+  const thumbsSwiper = new Swiper('.thumbs-images', {
+    modules: [Navigation, Pagination, Parallax, Autoplay, Thumbs],
+
+    watchOverflow: true,
+    slidesPerView: 4,
+    spaceBetween: 16,
+    observer: true,
+    observeParents: true,
+    parallax: true,
+    speed: 800,
+
+    breakpoints: {
+      320: {
+        slidesPerView: 1,
+        spaceBetween: 10,
+      },
+      800: {
+        slidesPerView: 3,
+        spaceBetween: 10,
+      },
+      992: {
+        slidesPerView: 4,
+        spaceBetween: 10,
+      },
+      1370: {
+        slidesPerView: 4,
+        spaceBetween: 16,
+      },
+    },
+    slideClass: 'thumbs-images__slide-ibg',
+    wrapperClass: 'thumbs-images__swiper',
+  });
+
+  new Swiper('.images-product-block-slider__slider', {
+    modules: [Navigation, Pagination, Parallax, Autoplay, Thumbs],
+    autoplay: {
+      delay: 3000,
+      disableOnInteraction: false,
+    },
+
+    thumbs: {
+      swiper: thumbsSwiper,
+    },
+    watchOverflow: true,
+    slidesPerView: 1,
+    spaceBetween: 30,
+    observer: true,
+    observeParents: true,
+    centeredSlides: true,
+
+    breakpoints: {
+      320: {
+        slidesPerView: 1,
+        spaceBetween: 10,
+      },
+      768: {
+        slidesPerView: 1,
+        spaceBetween: 1,
+      },
+      992: {
+        slidesPerView: 1,
+        spaceBetween: 0,
+      },
+      1370: {
+        slidesPerView: 1,
+        spaceBetween: 30,
+      },
+    },
+    slideClass: 'images-product-slider__slide-ibg',
+    wrapperClass: 'images-product-block__swiper',
+  });
+}
+
 console.log('On slider');
