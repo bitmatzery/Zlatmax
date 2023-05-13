@@ -15,6 +15,56 @@
           "img-card": "img/product-cards/01.jpg",
         })
       </section>
+      <section class="page__new-products new-products">
+        @include('partials/products-new.html', {
+          "title": "Новинки",
+        })
+      </section>
+      <section class="page__hits-products hits-products sale-products-no-bottom">
+        @include('partials/products-slider.html', {
+          "title": "Акции",
+          "page": "product.html",
+          "moretext": "Все Акции",
+          "img-card": "img/product-cards/01.jpg",
+        })
+      </section>
+      <section class="page__sale-products sale-products">
+        @include('partials/products-slider.html', {
+          "title": "Акции",
+          "moretext": "Все Акции",
+          "img-card": "img/product-cards/01.jpg",
+        })
+      </section>
+      <section class="page__new-products new-products new-products-no-top">
+        @include('partials/products-new.html', {
+          "title": "Новинки",
+        })
+      </section>
+      <section class="page__hits-products hits-products sale-products-no-bottom">
+        @include('partials/products-slider.html', {
+          "title": "Акции",
+          "moretext": "Все Акции",
+          "img-card": "img/product-cards/01.jpg",
+        })
+      </section>
+      <section class="page__sale-products sale-products">
+        @include('partials/products-slider.html', {
+          "title": "Акции",
+          "moretext": "Все Акции",
+          "img-card": "img/product-cards/01.jpg",
+        })
+      </section>
+
+        @include('partials/articles-module.html')
+        @include('partials/products-block.html')
+
+        <section class="page__hits-products hits-products">
+          @include('partials/products-slider.html', {
+            "title": "Фонари",
+            "moretext": "Перейти в каталог",
+            "img-card": "img/product-cards/02.jpg",
+          })
+        </section>
     </main>
     @include('partials/footer.html')
   </body>
