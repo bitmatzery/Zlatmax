@@ -1,0 +1,49 @@
+nav {
+  display: block;
+}
+
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+.breadcrumbs {
+  white-space: nowrap;
+  height: rem(22);
+
+  &__title {
+    font-weight: 700;
+    font-size: rem(24);
+    line-height: math.div(29, 24);
+
+    &:not(:last-child) {
+      margin-bottom: em(25, 24);
+    }
+  }
+
+  &__list {
+    display: flex;
+  }
+
+  &__link {
+    opacity: 0.5;
+    display: flex;
+    align-items: center;
+
+    &::after {
+      content: "";
+      background: url("../img/icons/arrow-bottom.svg") no-repeat 50% 50% / 1em 1em;
+      width: 0.6em;
+      height: 0.6em;
+      top: rem(5);
+      right: rem(-20);
+      margin: 0 rem(8);
+      transform: rotate(-90deg);
+    }
+  }
+
+  &__current {
+    color: $orange;
+  }
+}
