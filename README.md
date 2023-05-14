@@ -1,6 +1,6 @@
 # Zlatmax
 
-Sup on basic configuration of Webpack 5 & Gulp 4.
+Zlatmax on basic configuration of Webpack 5 & Gulp 4.
 
 ## Start using for a new project
 
