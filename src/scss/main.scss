@@ -9,7 +9,9 @@
 
 // подключения компонентов страницы
 @import "./components/button";
+@import "./components/paggging";
 @import "./components/header";
+@import "./components/catalog";
 @import "./components/slider";
 @import "./components/main-block-slider";
 @import "./components/catalog-cards";
@@ -17,4 +19,6 @@
 @import "./components/products-new";
 @import "./components/articles-module";
 @import "./components/products-block";
+@import "./components/catalog-block";
+@import "./components/breadcrumbs-block";
 @import "./components/footer";
