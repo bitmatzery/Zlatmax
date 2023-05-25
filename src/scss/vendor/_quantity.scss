@@ -1,0 +1,17 @@
+.quantity {
+  border: 1px dotted #ccc;
+  height: 50px;
+  width: 112px;
+}
+.quantity__input {
+  width: 20px;
+  height: 50px;
+  text-align: center;
+}
+.quantity__button-plus,
+.quantity__button-minus {
+  width: 40px;
+  height: 50px;
+  background-color: $black-default;
+  color: $white;
+}
