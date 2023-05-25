@@ -6,6 +6,7 @@
 @import "fonts";
 @import "functions";
 @import "global";
+@import "index";
 
 // подключения компонентов страницы
 @import "./components/button";
@@ -21,4 +22,5 @@
 @import "./components/products-block";
 @import "./components/catalog-block";
 @import "./components/breadcrumbs-block";
+@import "./components/product-block";
 @import "./components/footer";

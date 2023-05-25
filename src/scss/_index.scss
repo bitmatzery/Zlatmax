@@ -1,0 +1,16 @@
+.hits-products {
+  @include adaptiveValue("padding-top", 50, 40, 1);
+  @include adaptiveValue("padding-bottom", 120, 40, 1);
+  &-no-top {
+    padding-top: 0;
+  }
+}
+
+.sale-products {
+  @include adaptiveValue("padding-top", 120, 40, 1);
+  @include adaptiveValue("padding-bottom", 120, 40, 1);
+
+  &-no-bottom {
+    padding-bottom: 0;
+  }
+}
