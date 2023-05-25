@@ -1,0 +1,342 @@
+.product-block {
+  margin-top: rem(50);
+  @include adaptiveValue("margin-bottom", 120, 40, 1);
+
+  &__inner {
+    display: grid;
+    align-items: start;
+    @include adaptiveValue("margin-bottom", 30, 10, 1);
+
+    @media (min-width: 1370px) {
+      grid-template-columns: prc(785, 1600) 1fr;
+      gap: rem(130);
+    }
+
+    &__info {
+      @include adaptiveValue("margin-bottom", 120, 40, 1);
+    }
+  }
+
+  &__images {
+    @media (min-width: 1370px) {
+      padding-left: rem(30);
+    }
+    margin-bottom: rem(100);
+  }
+}
+
+.images-product-block {
+  width: calc(rem(754) + rem(120));
+  height: calc(rem(577) + rem(1));
+
+  @media (max-width: 1370px) {
+    width: calc(rem(754) + rem(100));
+    height: calc(rem(577) + rem(1));
+  }
+}
+
+.thumbs-images-block {
+  width: calc(rem(177) * 4 + rem(17) * 8);
+  height: calc(rem(195) + rem(1) * 1);
+
+  @media (max-width: 1370px) {
+    width: calc(rem(177) * 4 + rem(17) * 8);
+    height: calc(rem(195) + rem(1) * 1);
+  }
+}
+
+.images-product-block-slider {
+  display: grid;
+  gap: rem(16);
+}
+.parent-of-swiper-container {
+  max-width: 100%;
+}
+
+.thumbs-images__swiper.my-swiper {
+  width: auto;
+}
+
+.thumbs-images {
+  gap: rem(16);
+
+  @media (min-width: 1370px) {
+    margin-left: rem(30);
+  }
+
+  &__slide-ibg {
+    cursor: pointer;
+    opacity: 0.5;
+    transition: all 0.3s ease 0s;
+
+    &.swiper-slide-thumb-active {
+      opacity: 1;
+    }
+  }
+}
+
+.product-block {
+  background: #fefefe;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+  padding: rem(30);
+
+  &__header {
+    border-bottom: 1px solid rgba(20, 20, 20, 0.15);
+    padding: rem(30) 0;
+  }
+}
+
+.body-product-block {
+  &__table {
+    border-bottom: 1px solid rgba(20, 20, 20, 0.15);
+    @include adaptiveValue("padding", 30, 15, 1);
+  }
+
+  &__options {
+    border-bottom: 1px solid rgba(20, 20, 20, 0.15);
+    padding: rem(30) 0;
+  }
+
+  &__actions {
+    padding: rem(30) 0 0 0;
+  }
+}
+
+.header-product-block {
+  &__line {
+    display: flex;
+    row-gap: rem(15);
+    column-gap: rem(30);
+
+    &:not(:last-child) {
+      margin-bottom: rem(10);
+    }
+
+    @media (max-width: 800px) {
+      flex-wrap: wrap;
+    }
+  }
+
+  &__title {
+    font-size: rem(24);
+    font-weight: 700;
+    line-height: math.div(29, 24);
+    flex: 1 1 100%;
+  }
+
+  &__link {
+    font-size: rem(24);
+  }
+}
+
+.header-product {
+  &__rating {
+  }
+}
+.table-product-block {
+  display: grid;
+  gap: rem(20);
+
+  &__value {
+    color: rgba(20, 20, 20, 0.5);
+  }
+
+  @media (min-width: 500px) {
+    grid-template-columns: rem(200) 1fr;
+  }
+}
+.options-product-block {
+  display: grid;
+
+  &__label {
+    align-items: center;
+    margin: rem(20) 0 rem(20) rem(10);
+    &:first-child {
+      margin-bottom: 0;
+    }
+  }
+
+  &__value {
+    margin: rem(20) 0 rem(20) rem(0);
+
+    @media (min-width: 500px) {
+      grid-template-columns: rem(200) 1fr;
+    }
+  }
+}
+
+.form {
+  width: 100%;
+  height: rem(40);
+  border: 1px solid rgba(4, 4, 4, 0.3);
+  border-radius: rem(3);
+  font-size: rem(18);
+  padding: 0 rem(10);
+
+  @media (max-width: 800px) {
+    width: auto;
+  }
+}
+
+.actions-product-block {
+  &__price {
+    font-size: rem(30);
+    font-weight: 700;
+    display: inline-block;
+    line-height: math.div(37, 30);
+    background: url("../img/icons/rub.svg") right no-repeat;
+    padding: 0 rem(30) 0 0;
+
+    &:not(:last-child) {
+      margin-bottom: em(35, 30);
+    }
+  }
+
+  &__row {
+    display: flex;
+    gap: rem(20);
+    max-width: 100%;
+
+    @media (max-width: 1520px) {
+      flex-direction: column;
+    }
+  }
+
+  &__buttons {
+    flex: 1 1 auto;
+    display: flex;
+    gap: rem(20);
+
+    @media (min-width: 1520px) {
+      justify-content: flex-end;
+    }
+
+    @media (max-width: 500px) {
+      flex-direction: column;
+      .button {
+        width: auto;
+        max-width: rem(300);
+      }
+    }
+  }
+
+  &__cart {
+    span {
+      display: flex;
+      justify-content: space-evenly;
+      align-items: center;
+      text-align: center;
+      flex-direction: row-reverse;
+    }
+    @media (max-width: 475px) {
+      width: 100%;
+    }
+  }
+
+  .button {
+    @media (max-width: 475px) {
+      width: 100%;
+    }
+  }
+}
+
+.product-block-info {
+  background: #fefefe;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+  padding: rem(10) rem(30) rem(30) rem(30);
+
+  @media (max-width: 800px) {
+    display: grid;
+    grid-template-rows: auto;
+  }
+
+  @media (max-width: 600px) {
+    @include adaptiveValue("font-size", 20, 16, 1);
+  }
+
+  &__navigations {
+    display: flex;
+    justify-content: flex-start;
+    @include adaptiveValue("gap", 60, 30, 1);
+    border-bottom: 1px solid rgba(20, 20, 20, 0.5);
+
+    @media (max-width: 400px) {
+      display: inline-block;
+    }
+  }
+
+  &__title {
+    padding: rem(30) 0;
+    font-size: rem(20) 0;
+    line-height: math.div(24, 20);
+    color: rgba(20, 20, 20, 0.5);
+    position: relative;
+
+    @media (max-width: 400px) {
+      padding: rem(10) 0;
+    }
+
+    &.tabs__nav-btn--active {
+      &::after {
+        content: "";
+        position: absolute;
+        width: 100%;
+        height: 1px;
+        bottom: -1px;
+        left: 0;
+        border-color: $orange;
+      }
+    }
+  }
+
+  &__content {
+    padding-top: rem(30);
+  }
+}
+
+.tabs {
+  &__nav {
+    display: flex;
+    justify-content: flex-start;
+    @include adaptiveValue("gap", 60, 20, 1);
+    border-bottom: 1px solid rgba(20, 20, 20, 0.5);
+  }
+}
+
+.tab-active {
+  &::after {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 1px;
+    bottom: -1px;
+    left: 0;
+    border-color: $orange;
+  }
+}
+
+.tabs__nav {
+  list-style: none;
+  display: flex;
+  position: relative;
+
+  @media (max-width: 800px) {
+    display: grid;
+    grid-template-columns: rem(150) 1fr;
+    gap: 0;
+  }
+
+  @media (max-width: 400px) {
+    display: inline-block;
+  }
+}
+
+.tabs__nav-btn:focus {
+  color: $black-default;
+  background-color: $orange;
+}
+
+.tabs__nav-btn--active {
+  color: $black-default;
+  background-color: $orange;
+}
